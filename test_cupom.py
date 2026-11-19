@@ -28,3 +28,12 @@ def test_t3_percentual_zero_e_rejeitado():
     resultado = desconto_valido(percentual)
     # verificar
     assert resultado is False
+
+
+def test_t4_percentual_com_virgula_e_rejeitado():
+    # preparar
+    percentual = LIMITE - 0.5
+    # agir
+    resultado = desconto_valido(percentual)
+    # verificar
+    assert resultado is False
